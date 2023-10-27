@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- BOOTSTRAP CDN -->
+    <link rel="stylesheet" href="https://bootswatch.com/4/litera/bootstrap.min.css">
+    <style>
+        /* Add custom CSS if needed */
+    </style>
+</head>
+
+<body>
+    <!-- NAVIGATION -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a href="/" class="navbar-brand">
+            Your Storage
+        </a>
+    </nav>
+
+    <div class="container-fluid">
+        <!-- 1ST PART: FORM TO ADD A PRODUCT -->
+        <div id="App" class="row pt-5">
+            <!-- Bootstrap uses a 12-column grid system -->
+            <!-- On small screens (col-md), the form will take the full width, and on larger screens, it will take 4 columns -->
+            <div class="col-md-12 col-lg-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Add Your Product</h4>
+                    </div>
+                    <!-- PRODUCT FORM -->
+                    <form id="product-form" class="card-body">
+                        <div class="form-group">
+                            <input type="text" id="pName" placeholder="Your Product Name" class="form-control" required="">
+                        </div>
+                        <div class="form-group">
+                            <input type="number" id="pPrice" step="0.01" placeholder="Your Product Price" class="form-control" required="">
+                        </div>
+                        <div class="form-group">
+                            <input type="number" id="pYear" min="1990" max="2025" value="2021" placeholder="Your Product Year" class="form-control" required="">
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Save" class="btn btn-primary btn-block">
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- 2ND PART: LIST PRODUCTS -->
+            <!-- On small screens (col-md), the product list will take the full width, and on larger screens, it will take 8 columns -->
+            <div id="product-list" class="col-md-12 col-lg-8"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
